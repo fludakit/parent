@@ -1,4 +1,4 @@
-name: Build and Publish SNAPSHOT
+name: Build
 
 on:
   push:
@@ -22,11 +22,11 @@ jobs:
           distribution: temurin
           cache: maven
 
-      - name: Build
-        run: mvn -B -ntp install -DskipTests
+      - name: Build & Test
+        run: mvn -B -ntp install
 
   publish:
-    name: Publish SNAPSHOT to GitHub Packages
+    name: Publish to GitHub Packages
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -44,7 +44,7 @@ jobs:
           distribution: temurin
           cache: maven
 
-      - name: Publish SNAPSHOT to GitHub Packages
+      - name: Publish to GitHub Packages
         run: mvn -B -ntp deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
