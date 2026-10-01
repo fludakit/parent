@@ -24,9 +24,9 @@ jobs:
           cache: maven
 
       - name: Build & Test
-        run: mvn -B -ntp install
+        run: mvn -B -ntp -s .github/settings.xml install
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGES_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
 
   publish:
     name: Publish to GitHub Packages
@@ -48,6 +48,6 @@ jobs:
           cache: maven
 
       - name: Publish to GitHub Packages
-        run: mvn -B -ntp deploy -DskipTests
+        run: mvn -B -ntp -s .github/settings.xml deploy -DskipTests
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGES_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
