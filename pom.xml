@@ -58,6 +58,7 @@
         <smallrye-config.version>4.0.0</smallrye-config.version>
         <hikaricp.version>7.1.0</hikaricp.version>
         <hibernate.version>7.4.11.Final</hibernate.version>
+        <jboss-vfs.version>3.3.2.Final</jboss-vfs.version>
     </properties>
 
     <dependencyManagement>
@@ -117,6 +118,11 @@
                 <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss</groupId>
+                <artifactId>jboss-vfs</artifactId>
+                <version>${jboss-vfs.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
