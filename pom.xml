@@ -62,62 +62,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- SQL Init modules -->
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-sql-init-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-sql-init-config</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-sql-init-cdi</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <!-- JDBC Client modules -->
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-jdbc-client-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-jdbc-client-config</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-jdbc-client-cdi</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <!-- Transaction modules -->
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-tx-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-tx-cdi</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-tx-jdbc</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.fludakit</groupId>
-                <artifactId>fluda-tx-jpa</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
             <!-- BOMs -->
             <dependency>
                 <groupId>org.junit</groupId>
@@ -354,6 +298,17 @@
     </distributionManagement>
 
     <repositories>
+        <repository>
+            <name>GitHub Packages - Fludakit Org</name>
+            <id>github-fludakit</id>
+            <url>https://maven.pkg.github.com/fludakit/*</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
         <repository>
             <name>Central Portal Snapshots</name>
             <id>central-portal-snapshots</id>
