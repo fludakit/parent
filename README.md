@@ -1,5 +1,7 @@
 # FluDa Kit :: Parent
 
+[![Build](https://github.com/fludakit/parent/actions/workflows/build.yml/badge.svg)](https://github.com/fludakit/parent/actions/workflows/build.yml)
+
 Shared parent POM for all FluDa Kit modules. Consolidates dependency versions, plugin configurations, and build settings to ensure consistency across the project ecosystem.
 
 ## What it provides
