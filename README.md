@@ -34,12 +34,16 @@ Libraries:
 
 | Library | Version |
 |---|---|
-| H2 | 2.5.252 |
-| PostgreSQL | 42.7.13 |
 | Weld JUnit 5 | 5.0.3.Final |
 | SmallRye Config | 4.0.0 |
-| HikariCP | 7.1.0 |
-| Hibernate ORM | 7.0.2.Final |
+
+Module-specific dependencies (database drivers, connection pools, JPA providers, etc.) are managed in the individual project POMs rather than here, so each project owns the versions it actually uses:
+
+| Project | Managed dependencies |
+|---|---|
+| `jdbc-client` | H2 |
+| `sql-init` | H2, JBoss VFS |
+| `tx` | H2, HikariCP, Hibernate ORM |
 
 ### Managed plugins
 
@@ -103,8 +107,8 @@ Dependencies managed by the parent can be added without versions:
         <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>com.h2database</groupId>
-        <artifactId>h2</artifactId>
+        <groupId>org.jboss.weld</groupId>
+        <artifactId>weld-junit5</artifactId>
         <scope>test</scope>
     </dependency>
 </dependencies>
