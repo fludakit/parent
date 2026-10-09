@@ -57,7 +57,7 @@
         <weld-junit5.version>5.0.3.Final</weld-junit5.version>
         <smallrye-config.version>4.0.0</smallrye-config.version>
         <testcontainers.version>1.21.2</testcontainers.version>
-        <rest-assured.version>5.5.0</rest-assured.version>
+        <rest-assured.version>6.0.1</rest-assured.version>
     </properties>
 
     <dependencyManagement>
