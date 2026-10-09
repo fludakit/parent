@@ -77,7 +77,7 @@ In your module's `pom.xml`:
     <groupId>io.github.fludakit</groupId>
     <artifactId>fludakit-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <relativePath>../parent/pom.xml</relativePath>
+    <relativePath/>
 </parent>
 
 <artifactId>fluda-your-module-parent</artifactId>
