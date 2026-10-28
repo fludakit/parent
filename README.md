@@ -19,7 +19,7 @@ All FluDa Kit modules (use without `<version>` in child POMs):
 | Module | Artifact |
 |---|---|
 | SQL Init | `fluda-sql-init-core`, `fluda-sql-init-config`, `fluda-sql-init-cdi` |
-| JDBC Client | `fluda-jdbc-client-core`, `fluda-jdbc-client-config`, `fluda-jdbc-client-cdi` |
+| JDBC Client | `fluda-jdbc-core`, `fluda-jdbc-config`, `fluda-jdbc-cdi` |
 | Transaction | `fluda-tx-core`, `fluda-tx-cdi`, `fluda-tx-jdbc`, `fluda-tx-jpa` |
 
 BOMs:
