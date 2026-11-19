@@ -27,6 +27,13 @@
         </developer>
     </developers>
 
+    <scm>
+        <connection>scm:git:https://github.com/fludakit/parent.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/fludakit/parent.git</developerConnection>
+        <url>https://github.com/fludakit/parent</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <!-- Global Config -->
         <maven.compiler.release>21</maven.compiler.release>
